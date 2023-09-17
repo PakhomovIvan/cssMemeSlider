@@ -1,0 +1,17 @@
+body {
+    background-color: #25282a;
+}
+
+.wrapper {
+    margin: 0 auto;
+    margin-top: 5%;
+    display: flex;
+    flex-direction: row;
+    width: 600px;
+    height: 489px;
+    overflow: hidden;
+}
+
+.wrapper img {
+    border-radius: 3%;
+}
