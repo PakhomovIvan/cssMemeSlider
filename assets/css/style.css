@@ -1,6 +1,7 @@
 h2 {
   color: white;
   transition: .5s;
+  font-size: 1.2rem;
 }
 
 .wrapper {
@@ -17,10 +18,11 @@ h2 {
   justify-content: center;
   align-items: center;
   flex-direction: column-reverse;
-  width: 50%;
-  height: 50%;
+  width: 70vw;
+  height: auto;
   background: #1f1b1b;
   border-radius: 25px;
+  padding: 20px 0 20px 0;
 }
 
 .slider {
@@ -44,7 +46,8 @@ h2 {
 }
 
 input {
-  display: inline-block;
+  /* border: 5px solid aqua; */
+  display: none;
 }
 
 .slider-description {
@@ -52,11 +55,8 @@ input {
   overflow: hidden;
 }
 
-
-.inpt_1, .inpt_2, .inpt_3 {
-  &:hover {
+#radio_1:hover, #radio_2:hover, #radio_3:hover {
     cursor: pointer;
-  }
 }
 
 .txt2, .txt3 {
@@ -83,6 +83,11 @@ input#radio_1:checked {
   & ~ .slider .slider-img {
     transform: translateX(0);
   }
+
+  ~ .slider-button #radio1 span {
+    color:#0081b0;
+  }
+
 }
 
 input#radio_2:checked {
@@ -102,8 +107,13 @@ input#radio_2:checked {
   }
 
   & ~ .slider .slider-img {
-    transform: translateX(-37.8rem);
+    transform: translateX(-100%);
   }
+
+  ~ .slider-button #radio2 span {
+    color:#0081b0;
+  }
+
 }
 
 input#radio_3:checked {
@@ -123,20 +133,51 @@ input#radio_3:checked {
   }
 
   & ~ .slider .slider-img {
-    transform: translateX(-75.6rem);
+    transform: translateX(-200%);
+  }
+
+  ~ .slider-button #radio3 span {
+    color:#0081b0;
+  }
+
+}
+
+.slider-button {
+  display: flex;
+  gap: 0.5rem;
+}
+
+label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+  transition: .4s;
+  border-radius: 50%;
+  
+  &:hover {
+    & span {
+      color: #0081b0;
+    }
   }
 }
 
-
-
-
+span {
+  color: aliceblue;
+  margin: 0 auto;
+  font-size: 2rem;
+  transition: .5s;
+  border-radius: 1rem;
+}
 
 @media (max-width: 1280px) {
-  
+
 }
 
 @media (max-width: 768px) {
-
+  
 }
 
 @media (max-width: 320px) {
