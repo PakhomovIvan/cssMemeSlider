@@ -18,7 +18,7 @@ h2 {
   justify-content: center;
   align-items: center;
   flex-direction: column-reverse;
-  width: 70vw;
+  width: 60vw;
   height: auto;
   background: #1f1b1b;
   border-radius: 25px;
@@ -55,8 +55,16 @@ input {
   overflow: hidden;
 }
 
+.slider-hidden {
+  display: flex;
+}
+
 #radio_1:hover, #radio_2:hover, #radio_3:hover {
     cursor: pointer;
+}
+
+.txt1, .txt2, .txt3 {
+  animation: 1s ease-in-out 0s alternate op;
 }
 
 .txt2, .txt3 {
@@ -66,18 +74,18 @@ input {
 
 input#radio_1:checked {
   & ~ .slider-description .txt3 {
-    display: none;
     scale: 0;
+    display: none;
   }
 
   & ~ .slider-description .txt2 {
-    display: none;
     scale: 0;
+    display: none;
   }
 
   & ~ .slider-description .txt1 {
-    display: block;
     scale: 1;
+    display: block;
   }
 
   & ~ .slider .slider-img {
@@ -92,18 +100,18 @@ input#radio_1:checked {
 
 input#radio_2:checked {
   & ~ .slider-description .txt3 {
-    display: none;
     scale: 0;
+    display: none;
   }
 
   & ~ .slider-description .txt2 {
-    display: block;
     scale: 1;
+    display: block;
   }
 
   & ~ .slider-description .txt1 {
-    display: none;
     scale: 0;
+    display: none;
   }
 
   & ~ .slider .slider-img {
@@ -118,18 +126,18 @@ input#radio_2:checked {
 
 input#radio_3:checked {
   & ~ .slider-description .txt3 {
-    display: block;
     scale: 1;
+    display: block;
   }
 
   & ~ .slider-description .txt2 {
-    display: none;
     scale: 0;
+    display: none;
   }
 
   & ~ .slider-description .txt1 {
-    display: none;
     scale: 0;
+    display: none;
   }
 
   & ~ .slider .slider-img {
@@ -151,8 +159,8 @@ label {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 2rem;
-  height: 2rem;
+  width: 1.8rem;
+  height: 1.8rem;
   cursor: pointer;
   transition: .4s;
   border-radius: 50%;
@@ -166,20 +174,18 @@ label {
 
 span {
   color: aliceblue;
-  margin: 0 auto;
   font-size: 2rem;
   transition: .5s;
   border-radius: 1rem;
 }
 
-@media (max-width: 1280px) {
-
+@keyframes op {
+  0% { opacity:0; }   
+  100% { opacity:1; }
 }
 
-@media (max-width: 768px) {
-  
-}
+@media (max-width: 1280px) {}
 
-@media (max-width: 320px) {
+@media (max-width: 768px) {}
 
-}
+@media (max-width: 320px) {}
