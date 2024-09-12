@@ -4,8 +4,28 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Meme Slider</title>
+  <link rel="stylesheet" href="./assets/css/normalize.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
-  
+  <div class="wrapper">
+    <div class="slider-wrapper" id="sldr">
+      <input type="radio" id="radio_1" name="but" checked/>
+      <input type="radio" id="radio_2" name="but" />
+      <input type="radio" id="radio_3" name="but" />
+      <div class="slider-description">
+        <h2 class="txt1">Picture 1</h2>
+        <h2 class="txt2">Picture 2</h2>
+        <h2 class="txt3">Picture 3</h2>
+      </div>
+      <div class="slider" id="sld">
+        <div class="slider-img">
+          <img src="./assets/img/img_1.jpg" alt="Img1">
+          <img src="./assets/img/img_2.jpg" alt="Img2">
+          <img src="./assets/img/img_3.jpg" alt="Img3">
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
