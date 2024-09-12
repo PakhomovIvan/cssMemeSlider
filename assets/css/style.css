@@ -60,6 +60,7 @@ input {
 .slider-description {
   display: flex;
   overflow: hidden;
+  text-align: center;
 }
 
 .slider-hidden {
@@ -73,11 +74,6 @@ input {
 .txt1, .txt2, .txt3, .txt4 {
   animation: 1s ease-in-out 0s alternate op;
 }
-
-/* .txt2, .txt3 {
-  scale: 0;
-  display: none;
-} */
 
 input#radio_1:checked {
   & ~ .slider-description .txt3 {
