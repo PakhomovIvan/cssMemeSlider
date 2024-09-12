@@ -1,7 +1,15 @@
+
+@font-face {
+	font-family: 'HansHandCyr'; 
+	src: url(../fonts/HansHandCyr.ttf); 
+}
+
 h2 {
   color: white;
   transition: .5s;
   font-size: 1.2rem;
+  font-family: HansHandCyr;
+  letter-spacing: 0.35rem;
 }
 
 .wrapper {
@@ -21,8 +29,8 @@ h2 {
   width: 60vw;
   height: auto;
   background: #1f1b1b;
-  border-radius: 25px;
-  padding: 20px 0 20px 0;
+  border-radius: 1.5625rem;
+  padding: 1.25rem 0 1.25rem 0;
 }
 
 .slider {
@@ -46,7 +54,6 @@ h2 {
 }
 
 input {
-  /* border: 5px solid aqua; */
   display: none;
 }
 
@@ -63,14 +70,14 @@ input {
     cursor: pointer;
 }
 
-.txt1, .txt2, .txt3 {
+.txt1, .txt2, .txt3, .txt4 {
   animation: 1s ease-in-out 0s alternate op;
 }
 
-.txt2, .txt3 {
+/* .txt2, .txt3 {
   scale: 0;
   display: none;
-}
+} */
 
 input#radio_1:checked {
   & ~ .slider-description .txt3 {
