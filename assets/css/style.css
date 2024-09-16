@@ -73,6 +73,7 @@ input {
 
 .txt1, .txt2, .txt3, .txt4 {
   animation: 1s ease-in-out 0s alternate op;
+  padding: 0 1rem 0 1rem;
 }
 
 input#radio_1:checked {
@@ -231,6 +232,14 @@ span {
 
 @media (max-width: 1280px) {}
 
-@media (max-width: 768px) {}
+@media (max-width: 768px) {
+  h2 {
+    font-size: 1rem;
+  }
+}
 
-@media (max-width: 320px) {}
+@media (max-width: 320px) {
+  h2 {
+    font-size: 0.7rem;
+  }
+}
