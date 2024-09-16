@@ -10,6 +10,7 @@ h2 {
   font-size: 1.5rem;
   font-family: HansHandCyr;
   letter-spacing: 0.2rem;
+  margin: 0;
 }
 
 .wrapper {
@@ -26,6 +27,7 @@ h2 {
   justify-content: center;
   align-items: center;
   flex-direction: column-reverse;
+  gap: 1rem;
   width: 60vw;
   height: auto;
   background: #1f1b1b;
@@ -70,6 +72,7 @@ input {
 }
 
 .txt-btn {
+  /* margin-top: 1rem; */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -82,7 +85,6 @@ input {
 
 .txt1, .txt2, .txt3, .txt4 {
   animation: 1s ease-in-out 0s alternate op;
-  /* padding: 0 1rem 0 1rem; */
 }
 
 input#radio_1:checked {
@@ -249,10 +251,10 @@ span {
 
   .txt-btn {
     flex-direction: column;
+    gap: 1rem;
   }
 
   .slider-button {
-    padding-top: 1rem;
     order: -1;
   }
 }
