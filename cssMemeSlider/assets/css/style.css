@@ -72,7 +72,6 @@ input {
 }
 
 .txt-btn {
-  /* margin-top: 1rem; */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -202,7 +201,7 @@ input#radio_4:checked {
     transform: translateX(-300%);
   }
 
-  ~ .txt-btn .slider-button #radio4 span {
+  & ~ .txt-btn .slider-button #radio4 span {
     color:#0081b0;
   }
 }
@@ -227,6 +226,11 @@ label {
       color: #0081b0;
     }
   }
+
+  &:active {
+    animation: 1s ease-in-out 0s alternate act;
+    animation-delay: -0.5s;
+  };
 }
 
 span {
@@ -239,6 +243,11 @@ span {
 @keyframes op {
   0% { opacity:0; }   
   100% { opacity:1; }
+}
+
+@keyframes act {
+  0% { scale:1; }   
+  100% { scale:0.5; }
 }
 
 @media (max-width: 1280px) {}
