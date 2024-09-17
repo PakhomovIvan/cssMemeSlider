@@ -1,0 +1,273 @@
+
+@font-face {
+	font-family: 'HansHandCyr'; 
+	src: url(../fonts/HansHandCyr.ttf); 
+}
+
+h2 {
+  color: white;
+  transition: .5s;
+  font-size: 1.5rem;
+  font-family: HansHandCyr;
+  letter-spacing: 0.2rem;
+  margin: 0;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background: gray;
+}
+
+.slider-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column-reverse;
+  gap: 1rem;
+  width: 60vw;
+  height: auto;
+  background: #1f1b1b;
+  border-radius: 1.5625rem;
+  padding: 1.25rem 0 1.25rem 0;
+}
+
+.slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  height: 90%;
+  background: grey;
+  border-radius: 2%;
+  overflow: hidden;
+  text-align: center;
+}
+
+.slider-img {
+  display: flex;
+  transition: .5s;
+  & img {
+    width: 100%;
+  }
+}
+
+input {
+  display: none;
+}
+
+.slider-description {
+  display: flex;
+  overflow: hidden;
+  text-align: left;
+  order: -1;
+  width: 100%;
+}
+
+.slider-hidden {
+  display: flex;
+}
+
+.txt-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+}
+
+#radio_1:hover, #radio_2:hover, #radio_3:hover {
+    cursor: pointer;
+}
+
+.txt1, .txt2, .txt3, .txt4 {
+  animation: 1s ease-in-out 0s alternate op;
+}
+
+input#radio_1:checked {
+  & ~ .txt-btn .slider-description .txt3 {
+    scale: 0;
+    display: none;
+  }
+
+  & ~ .txt-btn .slider-description .txt4 {
+    scale: 0;
+    display: none;
+  }
+
+  & ~ .txt-btn .slider-description .txt2 {
+    scale: 0;
+    display: none;
+  }
+
+  & ~ .txt-btn .slider-description .txt1 {
+    scale: 1;
+    display: block;
+  }
+
+  & ~ .slider .slider-img {
+    transform: translateX(0);
+  }
+
+  ~ .txt-btn .slider-button #radio1 span {
+    color:#0081b0;
+  }
+}
+
+input#radio_2:checked {
+  & ~ .txt-btn .slider-description .txt3 {
+    scale: 0;
+    display: none;
+  }
+
+  & ~ .txt-btn .slider-description .txt4 {
+    scale: 0;
+    display: none;
+  }
+
+  & ~ .txt-btn .slider-description .txt2 {
+    scale: 1;
+    display: block;
+  }
+
+  & ~ .txt-btn .slider-description .txt1 {
+    scale: 0;
+    display: none;
+  }
+
+  & ~ .slider .slider-img {
+    transform: translateX(-100%);
+  }
+
+  ~ .txt-btn .slider-button #radio2 span {
+    color:#0081b0;
+  }
+}
+
+input#radio_3:checked {
+  & ~ .txt-btn .slider-description .txt3 {
+    scale: 1;
+    display: block;
+  }
+
+  & ~ .txt-btn .slider-description .txt4 {
+    scale: 0;
+    display: none;
+  }
+
+  & ~ .txt-btn .slider-description .txt2 {
+    scale: 0;
+    display: none;
+  }
+
+  & ~ .txt-btn .slider-description .txt1 {
+    scale: 0;
+    display: none;
+  }
+
+  & ~ .slider .slider-img {
+    transform: translateX(-200%);
+  }
+
+  ~ .txt-btn .slider-button #radio3 span {
+    color:#0081b0;
+  }
+}
+
+input#radio_4:checked {
+  & ~ .txt-btn .slider-description .txt4 {
+    scale: 1;
+    display: block;
+  }
+
+  & ~ .txt-btn .slider-description .txt3 {
+    scale: 0;
+    display: none;
+  }
+
+  & ~ .txt-btn .slider-description .txt2 {
+    scale: 0;
+    display: none;
+  }
+
+  & ~ .txt-btn .slider-description .txt1 {
+    scale: 0;
+    display: none;
+  }
+
+  & ~ .slider .slider-img {
+    transform: translateX(-300%);
+  }
+
+  & ~ .txt-btn .slider-button #radio4 span {
+    color:#0081b0;
+  }
+}
+
+.slider-button {
+  display: flex;
+  gap: 0.5rem;
+}
+
+label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1.8rem;
+  height: 1.8rem;
+  cursor: pointer;
+  transition: .4s;
+  border-radius: 50%;
+  
+  &:hover {
+    & span {
+      color: #0081b0;
+    }
+  }
+
+  &:active {
+    animation: 1s ease-in-out 0s alternate act;
+    animation-delay: -0.5s;
+  };
+}
+
+span {
+  color: aliceblue;
+  font-size: 2rem;
+  transition: .5s;
+  border-radius: 1rem;
+}
+
+@keyframes op {
+  0% { opacity:0; }   
+  100% { opacity:1; }
+}
+
+@keyframes act {
+  0% { scale:1; }   
+  100% { scale:0.5; }
+}
+
+@media (max-width: 1280px) {}
+
+@media (max-width: 768px) {
+  h2 {
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+  }
+
+  .txt-btn {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .slider-button {
+    order: -1;
+  }
+}
+
+@media (max-width: 320px) {
+
+}
